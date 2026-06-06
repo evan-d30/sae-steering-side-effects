@@ -73,3 +73,71 @@ figures/                 Available here or in the manuscript (Appendix + Results
 paper/                   Manuscript file
 ```
 
+
+## Installation
+
+Create a fresh Python environment and install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -r requirements.txt
+```
+
+For Llama-3.1-8B and Gemma, you may need to authenticate with Hugging Face and accept model license terms:
+
+```python
+from huggingface_hub import login
+login(token="YOUR_HF_TOKEN")
+```
+
+Do **not** commit tokens, `.env` files, Hugging Face caches, model weights, SAE checkpoints, or other private files.
+
+## Basic reproduction flow
+
+For each model:
+
+1. Run the relevant Phase 1/2/3 script in `scripts/phase123/`.
+2. Confirm that Phase 1 predictor files, Phase 2 steering-label files, and Phase 3 evaluation files are saved.
+3. Run the corresponding Phase 4 script in `scripts/phase4/`.
+4. Copy final CSV/JSON outputs into `results/<model_name>/` if you want a consolidated result folder.
+5. Run `scripts/figures/figures_3_4_5_with_llama.py` to regenerate main figures.
+
+Example:
+
+```bash
+python scripts/phase123/llama31_8b_phase123.py
+python scripts/phase4/llama31_8b_phase4_screening.py
+python scripts/figures/figures_3_4_5_with_llama.py
+```
+
+## Expected result files
+
+Typical Phase 1/2/3 outputs:
+
+```text
+phase1_predictors.csv
+phase2_steering_labels.csv
+robust_phase2_phase3_merged.csv
+robust_phase3_baseline_comparison.csv
+robust_phase3_univariate_correlations.csv
+robust_phase3_cv_regression_results.csv
+robust_phase3_residualized_target_results.csv
+robust_phase123_summary.json
+```
+
+Typical Phase 4 outputs:
+
+```text
+phase4_selected_features.csv
+phase4_fresh_steering_eval.csv
+phase4_group_tests.csv
+phase4_screening_summary.csv
+phase4_verdict.json
+```
+
+## Notes
+
+The scripts are research artifacts converted from the original experimental runs rather than a polished Python package. For exact manuscript reproduction, use the same model checkpoints, SAE releases, feature counts, context counts, and random seeds reported in the paper/config files.
+
