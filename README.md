@@ -68,8 +68,8 @@ scripts/phase123/        Phase 1 predictor, Phase 2 steering, Phase 3 prediction
 scripts/phase4/          Held-out screening scripts
 scripts/figures/         Figure-generation scripts
 scripts/summarize_results.py
-results/                 Place generated result CSV/JSON files here
-figures/                 Place generated figures here
-paper/                   Optional manuscript files
+results/                 Available here or in the manuscript (Appendix + Results)
+figures/                 Available here or in the manuscript (Appendix + Results)
+paper/                   Manuscript file
 ```
 
