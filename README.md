@@ -59,3 +59,17 @@ The model selects features predicted to be cleaner or messier, then tests them w
 The goal of Phase 4 is to check whether the predictor is practically useful for screening new features, rather than only explaining features already seen during analysis.
 
 Some scripts were converted from the interactive cloud runs used during development, so check model paths, SAE paths, and output directories before launching long jobs on a new machine.
+
+## Directory structure
+
+```text
+configs/                 Model and experiment configuration summaries
+scripts/phase123/        Phase 1 predictor, Phase 2 steering, Phase 3 prediction scripts
+scripts/phase4/          Held-out screening scripts
+scripts/figures/         Figure-generation scripts
+scripts/summarize_results.py
+results/                 Place generated result CSV/JSON files here
+figures/                 Place generated figures here
+paper/                   Optional manuscript files
+```
+
