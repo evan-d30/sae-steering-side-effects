@@ -139,3 +139,7 @@ phase4_verdict.json
 
 The scripts are research artifacts converted from the original experimental runs rather than a polished Python package. For exact manuscript reproduction, use the same model checkpoints, SAE releases, feature counts, context counts, and random seeds reported in the paper/config files.
 
+## Licence
+
+Code is released under the MIT License.
+
