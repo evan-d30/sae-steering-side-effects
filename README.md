@@ -72,6 +72,8 @@ scripts/summarize_results.py
 
 All relevant results and figures will be included in the actual paper either in Results or Appendix section.
 
+Generated result CSV/JSON files and rendered figures are not tracked in this repository. The manuscript and appendix report the final tables and figures. Users who want to reproduce them can run the scripts and regenerate outputs locally.
+
 ## Installation
 
 Create a fresh Python environment and install dependencies:
