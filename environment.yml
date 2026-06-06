@@ -1,0 +1,23 @@
+name: sae-steering-side-effects
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - jupyter
+  - notebook
+  - pip:
+      - torch
+      - transformer-lens
+      - sae-lens
+      - datasets
+      - huggingface_hub
+      - accelerate
+      - einops

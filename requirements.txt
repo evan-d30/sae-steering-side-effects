@@ -1,0 +1,16 @@
+torch
+transformer-lens
+sae-lens
+datasets
+huggingface_hub
+accelerate
+einops
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+tqdm
+pyyaml
+jupyter
+notebook
