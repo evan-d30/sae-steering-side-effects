@@ -68,11 +68,9 @@ scripts/phase123/        Phase 1 predictor, Phase 2 steering, Phase 3 prediction
 scripts/phase4/          Held-out screening scripts
 scripts/figures/         Figure-generation scripts
 scripts/summarize_results.py
-results/                 Available here or in the manuscript (Appendix + Results)
-figures/                 Available here or in the manuscript (Appendix + Results)
-paper/                   Manuscript file
 ```
 
+All relevant results and figures will be included in the actual paper either in Results or Appendix section.
 
 ## Installation
 
@@ -102,14 +100,14 @@ For each model:
 2. Confirm that Phase 1 predictor files, Phase 2 steering-label files, and Phase 3 evaluation files are saved.
 3. Run the corresponding Phase 4 script in `scripts/phase4/`.
 4. Copy final CSV/JSON outputs into `results/<model_name>/` if you want a consolidated result folder.
-5. Run `scripts/figures/figures_3_4_5_with_llama.py` to regenerate main figures.
+5. Run `scripts/figures/figure_generation_code.py` to regenerate main figures.
 
 Example:
 
 ```bash
 python scripts/phase123/llama31_8b_phase123.py
 python scripts/phase4/llama31_8b_phase4_screening.py
-python scripts/figures/figures_3_4_5_with_llama.py
+python scripts/figures/figure_generation_code.py
 ```
 
 ## Expected result files
