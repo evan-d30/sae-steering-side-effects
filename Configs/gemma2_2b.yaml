@@ -1,0 +1,17 @@
+model_name: gemma-2-2b
+model_citation_key: team2024gemma
+primary_hook: layer_12/width_16k/canonical
+downstream_hook: layer_16/width_16k/canonical
+sae_release: gemma-scope-2b-pt-res-canonical
+primary_sae_id: layer_12/width_16k/canonical
+downstream_sae_id: layer_16/width_16k/canonical
+dataset: wikitext
+dataset_config: wikitext-103-raw-v1
+dataset_split: train[:2%]
+distinct_texts: 8000
+context_length: 48
+n_contexts: 2048
+n_features: 300
+contexts_per_type: 16
+intervention: fixed_global_add
+alpha: 1.0
